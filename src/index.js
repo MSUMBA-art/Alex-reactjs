@@ -1,29 +1,63 @@
 import React from "react";
 import ReactDom from "react-dom";
 
+//importing CSS
+import "./index.css";
 
 // Nested Components, React Tools
 function BooList() {
   return (
-    <section>
-    <Book />
-  </section>
+    <div>
+    
+      <h1 className="bookHeading">BOOK RECOMMENDATION SITE</h1>
+      
+    
+    <section className="booklist">
+      
+      <Book />
+      <Book />
+      <Book />
+      <Book />
+      <Book />
+      <Book />
+      <Book />
+      </section>
+      </div>
   );
 }
 
 const Book = () => {
   return (
-    <article>
-      <Image></Image>
+    <article className="book">
+      <Image />
+      <Title />
+      <Author />
     </article>
   );
 }
 
 const Image = () => {
-  return (<img
-    src="https://images-na.ssl-images-amazon.com/images/I/61yM-irmXoS._AC_UL200_SR200,200_.jpg" alt="logo"
+  return (
+    <img
+    src="https://m.media-amazon.com/images/I/51n59fieopL._AC_UY218_.jpg" alt="logo"
   />
   );
+}
+
+const Title = () => {
+  return (
+    <div>
+      <h1>Things Fall Apart</h1>
+    </div>
+  );
+}
+
+const Author = () => {
+  return (
+    <div>
+      <h2>Author: Alexander Msumba</h2>
+    </div>
+  )
 }
 
 // const Person = () => {
