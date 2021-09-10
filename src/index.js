@@ -8,57 +8,52 @@ import "./index.css";
 function BooList() {
   return (
     <div>
-    
       <h1 className="bookHeading">BOOK RECOMMENDATION SITE</h1>
-      
-    
-    <section className="booklist">
-      
-      <Book />
-      <Book />
-      <Book />
-      <Book />
-      <Book />
-      <Book />
-      <Book />
+
+      <section className="booklist">
+        <Book />
       </section>
-      </div>
+    </div>
   );
 }
 
 const Book = () => {
   return (
     <article className="book">
-      <Image />
+      <img
+      src="https://m.media-amazon.com/images/I/51n59fieopL._AC_UY218_.jpg"
+      alt="logo"
+      />
+      <h1>Things Fall Apart</h1>
+       <h4>Author: Alexander Msumba</h4>
+      {/* <Image />
       <Title />
-      <Author />
+      <Author /> */}
     </article>
   );
-}
+};
 
-const Image = () => {
-  return (
-    <img
-    src="https://m.media-amazon.com/images/I/51n59fieopL._AC_UY218_.jpg" alt="logo"
-  />
-  );
-}
+// const Image = () => {
+//   return (
+    
+//   );
+// };
 
-const Title = () => {
-  return (
-    <div>
-      <h1>Things Fall Apart</h1>
-    </div>
-  );
-}
+// const Title = () => {
+//   return (
+//     <div>
+     
+//     </div>
+//   );
+// };
 
-const Author = () => {
-  return (
-    <div>
-      <h2>Author: Alexander Msumba</h2>
-    </div>
-  )
-}
+// const Author = () => {
+//   return (
+//     <div>
+     
+//     </div>
+//   );
+// };
 
 // const Person = () => {
 //   return <h2>This is Alex, I am leaning react.js</h2>;
@@ -74,4 +69,4 @@ const Author = () => {
 //   return React.createElement("h1", {}, "Hello World");
 // }
 
-ReactDom.render(<BooList />, document.getElementById('root'));
+ReactDom.render(<BooList />, document.getElementById("root"));

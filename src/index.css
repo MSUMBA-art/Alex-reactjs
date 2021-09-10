@@ -37,9 +37,16 @@ h2 {
     margin: 0.5rem;
 }
 
+.book h4 {
+    color: #617d98;
+    font-size: 0.75rem;
+    margin-top: 0.25rem;
+}
+
 .bookHeading {
     text-align: center;
-    color: darkblue;
+    color: rgb(107, 8, 13);
+    background-color: burlywood;
 }
 
 @media screen and (min-width:786px) {
