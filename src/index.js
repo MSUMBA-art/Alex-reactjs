@@ -31,7 +31,9 @@ function BooList() {
           img={firstBook.img}
           title={firstBook.title}
           author={firstBook.author}
-        />
+        >
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec finibus at tortor eu accumsan. Maecenas sit amet est fermentum, mollis lectus ut, tempor nulla. Vivamus eu egestas massa. Fusce orc</p>
+          </Book>
         <Book
           img={secondBook.img}
           title={secondBook.title}
@@ -42,13 +44,16 @@ function BooList() {
   );
 }
 
+
 const Book = (props) => {
-  const { img, title, author } = props;
+// const Book = ({img, title, author, children}) => {
+ const { img, title, author } = props;
   return (
     <article className="book">
       <img src={img} alt="logo" />
       <h1>{title}</h1>
       <h4>{author}</h4>
+      {props.children}
     </article>
   );
 };
