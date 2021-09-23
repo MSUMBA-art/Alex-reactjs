@@ -5,20 +5,32 @@ import ReactDom from "react-dom";
 import "./index.css";
 
 //setup variables
-const firstBook = {
-  img: "https://m.media-amazon.com/images/I/515lG1Sx8IL._AC_UY218_.jpg",
-  title: "Things Fall Apart",
-  author: "Alexander Msumba",
-};
+const books = [
 
-const secondBook = {
-  img: "https://m.media-amazon.com/images/I/61Ovdpf-sfL._AC_UY218_.jpg",
-  title: "Going to School",
-  author: "Irene Alexander",
-};
+
+  {
+    img: "https://m.media-amazon.com/images/I/515lG1Sx8IL._AC_UY218_.jpg",
+    title: "Things Fall Apart",
+    author: "Alexander Msumba",
+  },
+
+  {
+    img: "https://m.media-amazon.com/images/I/61Ovdpf-sfL._AC_UY218_.jpg",
+    title: "Going to School",
+    author: "Irene Alexander",
+  },
+];
+
+
 
 // Nested Components, React Tools
-function BooList() {
+const names = ["Alex", "Berth", "Irene"];
+const newNames = names.map((name) => {
+  return <h1>{name}</h1>;
+});
+console.log(newNames);
+
+function BookList() {
   return (
     <div>
       <div>
@@ -27,18 +39,19 @@ function BooList() {
       </div>
 
       <section className="booklist">
-        <Book
+        {/* <Book
           img={firstBook.img}
           title={firstBook.title}
           author={firstBook.author}
         >
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec finibus at tortor eu accumsan. Maecenas sit amet est fermentum, mollis lectus ut, tempor nulla. Vivamus eu egestas massa. Fusce orc</p>
+         
           </Book>
         <Book
           img={secondBook.img}
           title={secondBook.title}
           author={secondBook.author}
-        />
+        /> */}
+        {newNames}
       </section>
     </div>
   );
@@ -53,7 +66,7 @@ const Book = (props) => {
       <img src={img} alt="logo" />
       <h1>{title}</h1>
       <h4>{author}</h4>
-      {props.children}
+      {/* {children} */}
     </article>
   );
 };
@@ -94,4 +107,4 @@ const Book = (props) => {
 //   return React.createElement("h1", {}, "Hello World");
 // }
 
-ReactDom.render(<BooList />, document.getElementById("root"));
+ReactDom.render(<BookList />, document.getElementById("root"));
