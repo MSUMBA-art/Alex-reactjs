@@ -24,39 +24,20 @@ const books = [
 
 
 // Nested Components, React Tools
-const names = ["Alex", "Berth", "Irene"];
-const newNames = names.map((name) => {
-  return <h1>{name}</h1>;
-});
-console.log(newNames);
+
 
 function BookList() {
   return (
     <div>
-      <div>
-        <h1 className="bookHeading">AJ BOOK RECOMMENDATION SITE</h1>
-        <p className="reading">Knowledge Is Power</p>
+      <section className="booklist"> {books.map((book) => {
+        return "hellooo";
+     })}</section>
       </div>
-
-      <section className="booklist">
-        {/* <Book
-          img={firstBook.img}
-          title={firstBook.title}
-          author={firstBook.author}
-        >
-         
-          </Book>
-        <Book
-          img={secondBook.img}
-          title={secondBook.title}
-          author={secondBook.author}
-        /> */}
-        {newNames}
-      </section>
-    </div>
-  );
+  )
 }
 
+     
+       
 
 const Book = (props) => {
 // const Book = ({img, title, author, children}) => {
